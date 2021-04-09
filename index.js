@@ -24,11 +24,17 @@ class BST {
         const searchTree = node => {
             // if value < node.value, go left 
             if (value < node.value) {
+                
+                if (!node.left) {
+                    node.left = newNode
+                } else {
+                    searchTree(node.left)
+                }
 
             }
             // if value > node.value, go right
             else if (value > node.value) {
-                
+
             }
         }
     }
