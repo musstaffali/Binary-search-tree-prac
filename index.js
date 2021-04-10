@@ -86,19 +86,25 @@ class BST {
     }
 
     // depth first search
+    
 
     // in-order
-    dfsPreOrder(){
+    // left, root, right
+    // 2, 3, 12, 15, 28, 36, 39
+    dfsInOrder(){
 
     }
 
     //pre-order
+    // root, left, right
+    // 15, 3, 2, 12, 36, 28, 39
     dfsPreOrder(){
         
     }
 
     // post-order 
-    dfsPreOrder(){
+    // left, right, root
+    dfsPostOrder(){
         
     }
 
