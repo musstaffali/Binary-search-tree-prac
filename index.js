@@ -110,14 +110,24 @@ class BST {
     // root, left, right
     // 15, 3, 2, 12, 36, 28, 39
     dfsPreOrder(){
-        
+                    // capture root node value
+                    result.push(node.value)
+                    // if left child exists, go left again
+                    if (node.left) traverse(node.left)
+                    // if right child exists, go right again
+                    if (node.right) traverse(node.right)
     }
 
     // post-order 
     // left, right, root
     // 2, 12, 3, 28, 39, 36, 15 
     dfsPostOrder(){
-        
+            // if left child exists, go left again
+            if (node.left) traverse(node.left)
+            // if right child exists, go right again
+            if (node.right) traverse(node.right)
+            // capture root node value
+            result.push(node.value)
     }
 
     // breadth first search - level by level
