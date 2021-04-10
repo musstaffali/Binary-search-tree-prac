@@ -59,7 +59,13 @@ class BST {
     }
 
     max() {
+        let currentNode = this.root
 
+        while (currentNode.right) {
+            currentNode = currentNode,right
+        }
+
+        return currentNode.value
     }
 
     contains() {
