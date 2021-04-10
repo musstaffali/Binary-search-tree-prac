@@ -148,6 +148,9 @@ class BST {
             if(currentNode.left) {
                 queue.push(current.left)
             }
+            if (currentNode.right) {
+                queue.push(currentNode.right)
+            }
         }
 
         return result
