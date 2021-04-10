@@ -133,7 +133,23 @@ class BST {
     // breadth first search - level by level
 
     // use a queue!
+    // 15, 3, 36, 2, 12, 28, 39
     bfs() {
+        let result = []
+        let queue = []
 
+        queue.push(this.root)
+
+        while(queue.length) {
+            let currentNode = queue.shift()
+
+            result.push(currentNode)
+
+            if(currentNode.left) {
+                queue.push(current.left)
+            }
+        }
+
+        return result
     }
 }
