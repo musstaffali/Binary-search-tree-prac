@@ -81,6 +81,8 @@ class BST {
                 currentNode = currentNode.right
             }
         }
+
+        return false
     }
 
     // depth first search
