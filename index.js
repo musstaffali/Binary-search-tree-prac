@@ -85,14 +85,25 @@ class BST {
         return false
     }
 
-    // depth first search
+    // depth first search - branch by branch
     
 
     // in-order
     // left, root, right
     // 2, 3, 12, 15, 28, 36, 39
     dfsInOrder(){
+        let result = []
 
+        const traverse = node =>  {
+            // if left child exists, go left again
+            if (node.left) traverse(node.left)
+            // capture root node value
+            result.push(node.value)
+            // if right child exists, go right again
+            if (node.right) traverse(node.right)
+        }
+
+        return result
     }
 
     //pre-order
@@ -104,11 +115,14 @@ class BST {
 
     // post-order 
     // left, right, root
+    // 2, 12, 3, 28, 39, 36, 15 
     dfsPostOrder(){
         
     }
 
-    // breadth first search
+    // breadth first search - level by level
+
+    // use a queue!
     bfs() {
 
     }
